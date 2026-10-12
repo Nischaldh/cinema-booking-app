@@ -1,5 +1,13 @@
 package booking
 
+import "fmt"
+
+//errors
+var(
+	ErrSeatAlreadyBooked = fmt.Errorf("Seat is already taken")
+)
+
+
 type Booking struct{
 	ID string
 	MovieID string
@@ -10,6 +18,6 @@ type Booking struct{
 
 
 type BookingStore interface{
-	Book(b Booking) (Booking, error)
+	Book(b Booking) error
 	ListBookings(movieId string) []Booking
 }
