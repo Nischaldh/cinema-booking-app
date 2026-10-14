@@ -1,6 +1,9 @@
 package booking
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 //errors
 var(
@@ -14,6 +17,7 @@ type Booking struct{
 	SeatID string
 	UserID string
 	Status string
+	ExpiresAt time.Time
 }
 
 

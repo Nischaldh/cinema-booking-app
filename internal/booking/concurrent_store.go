@@ -34,6 +34,5 @@ func (s *ConcurrentStore) ListBookings(movieID string) []Booking {
 			results = append(results, b)
 		}
 	}
-
 	return results
 }
